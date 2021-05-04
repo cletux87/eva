@@ -356,24 +356,23 @@ function App() {
         </div>
         
       </header>
-      <main className="flex flex-col h-5/6 w-screen mt-5 bg-white">
-          <section className="flex flex-row justify-center h-2/4 overflow-y-hidden mx-5  border-blue-500 b-5 min-w-full">
-            <div className="w-7/8 overflow-x-hidden overflow-y-scroll -ml-10 min-w-min min-h-full" style={{minWidth:'470px'}}>
+      <main className="flex flex-col h-5/6 w-screen mt-5 bg-white" >
+          <section className="flex flex-row justify-center h-2/4 overflow-y-hidden  border-blue-500 b-5 min-w-full">
+            <div className="w-full overflow-x-hidden overflow-y-scroll min-h-full">
             { 
               !isNil(topCryptosDataSorted) && topCryptosDataSorted.length > 0 && !loadinTopCryptosData &&
               <SimpleTable bestCoinsData={topCryptosDataSorted} onClick={handleIndexSelection} priceLabel={sortPriceLabel} nameLabel={sortNameLabel} onClickPrice={handleReturnFilteredSortedDataArray} onClickName={handleReturnFilteredSortedDataArray}/>
             }
             {
-              loadinTopCryptosData && <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-64 w-64 overflow-x-hidden">Loading</div>
-            }
-            </div>
-            <div className="flex flex-col hidden mb-10 justify-center items-center md:block md:visible md:w-2/6 ml-10 bg-white">
+              loadinTopCryptosData && 
               <Lottie 
-                  options={defaultOptionsFunny}
-                  isStopped={false}
-                  isPaused={false}
-                  isClickToPauseDisabled={true}
-                />
+                options={defaultOptionsFunny}
+                isStopped={false}
+                isPaused={false}
+                isClickToPauseDisabled={true}
+              />
+
+            }
             </div>
           </section>
           <section className="flex h-2/4 justify-center items-center bg-white mt-5 mr-500 overflow-x-hidden mb-10 ml-5" 

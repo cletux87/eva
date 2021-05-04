@@ -15,7 +15,7 @@ export default function SimpleTable(props: ISimpleTable): React.ReactElement {
   return (
     <div className="flex flex-col overflow-x-hidden overflow-y-hidden">
       <div className="-my-2 sm:-mx-3 lg:-mx-5">
-        <div className="py-2 align-middle inline-block min-w-full sm:px-3 lg:px-5">
+        <div className="py-2 align-middle inline-block min-w-full">
           <div className="shadow border-b border-gray-200 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50" style={{ position: 'sticky' }}>
@@ -51,7 +51,7 @@ export default function SimpleTable(props: ISimpleTable): React.ReactElement {
                     <td data-cy={`table-row-${coin.internalName}`} className="px-2 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="ml-4">
-                          <div data-cy='full-name' className="text-sm font-medium text-gray-900">{coin.fullName}</div>
+                          <div data-cy='full-name' className="text-sm font-medium text-gray-900">{coin.fullName.substring(0, coin.fullName.length > 10 ? 10 :coin.fullName.length-1)}</div>
                           <div className="text-sm text-gray-500" id='coin'>{coin.internalName}</div>
                         </div>
                       </div>
