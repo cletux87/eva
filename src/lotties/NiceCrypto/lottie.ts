@@ -1,4 +1,4 @@
-export const lottie = {
+export const lottieNiceCrypto = {
     "nm":"Synfig Animation 5",
     "layers":[
        {
@@ -39472,4 +39472,4 @@ export const lottie = {
     "w":1080,
     "op":121.0
  }
- export default lottie;
+ export default lottieNiceCrypto;

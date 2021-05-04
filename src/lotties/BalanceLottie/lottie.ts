@@ -1,4 +1,4 @@
-export const lottie = {
+export const lottieBalance = {
     "v":"5.4.3",
     "fr":30,
     "ip":0,
@@ -3394,4 +3394,4 @@ export const lottie = {
     ]
  }
 
- export default lottie;
+ export default lottieBalance;
