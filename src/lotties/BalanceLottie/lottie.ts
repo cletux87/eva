@@ -1,4 +1,4 @@
-export default {
+export default const lottie = {
     "v":"5.4.3",
     "fr":30,
     "ip":0,

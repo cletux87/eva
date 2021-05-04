@@ -20,7 +20,7 @@ function App() {
   const [loadinTopCryptosData, setLoadingTopCryptosData] = useState<Boolean>(true);
   const [topCryptosData, setTopCryptosData] = useState<ICoin[]>([]);
   const [topCryptosDataSorted, setTopCryptosDataSorted] = useState<ICoin[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [setSelectedIndex] = useState<number>(0);
   const [inputValue,setInputValue] = useState<string>('');
   const [selectFilterValue, setSelectFilterValue] = useState<string>(FilterTypes.FILTER_BY);
   const [singleCoinHistory, setSingleCoinHistory] = useState<any>([]);
@@ -68,6 +68,7 @@ function App() {
       }).finally(()=>{
         setLoadingTopCryptosData(false);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   /**
