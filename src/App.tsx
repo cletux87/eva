@@ -5,9 +5,9 @@ import FilterBox,{ FilterTypes, FilterSigns } from './components/FilterBox';
 import SimpleChart from './components/SimpleChart';
 import Lottie from 'react-lottie';
 import { isNil } from './utils/obj';
-import animationData from '../src/lotties/CryptoLottie/lottie';
-import animationDataBalance from '../src/lotties/BalanceLottie/lottie';
-import animationDataFunny  from  '../src/lotties/NiceCrypto/lottie';
+import lottieCrypto from '../src/lotties/CryptoLottie/lottie';
+import lottieBalance from '../src/lotties/BalanceLottie/lottie';
+import lottieNiceCrypto from  '../src/lotties/NiceCrypto/lottie';
 
 const tableHeaderNames = {
   NAME: 'Name',
@@ -20,7 +20,8 @@ function App() {
   const [loadinTopCryptosData, setLoadingTopCryptosData] = useState<Boolean>(true);
   const [topCryptosData, setTopCryptosData] = useState<ICoin[]>([]);
   const [topCryptosDataSorted, setTopCryptosDataSorted] = useState<ICoin[]>([]);
-  const [setSelectedIndex] = useState<number>(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [selectedIndex,setSelectedIndex] = useState<number>(0);
   const [inputValue,setInputValue] = useState<string>('');
   const [selectFilterValue, setSelectFilterValue] = useState<string>(FilterTypes.FILTER_BY);
   const [singleCoinHistory, setSingleCoinHistory] = useState<any>([]);
@@ -322,19 +323,19 @@ function App() {
   const defaultOptionsCryptos = {
     loop:true,
     autoplay:true,
-    animationData: animationData
+    animationData: lottieCrypto
   }
 
   const defaultOptionsBalance = {
     loop:true,
     autoplay:true,
-    animationData: animationDataBalance
+    animationData: lottieBalance
   }
 
   const defaultOptionsFunny = {
     loop:true,
     autoplay:true,
-    animationData: animationDataFunny
+    animationData: lottieNiceCrypto
   }
 
   return (
