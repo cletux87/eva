@@ -1,4 +1,4 @@
-export default const lottie = {
+export const lottie = {
     "nm":"Synfig Animation 5",
     "layers":[
        {
