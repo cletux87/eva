@@ -39472,3 +39472,4 @@ export const lottie = {
     "w":1080,
     "op":121.0
  }
+ export default lottie;
